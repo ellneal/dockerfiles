@@ -1,4 +1,4 @@
-FROM node:9.3
+FROM node:alpine
 
 RUN npm install -g --unsafe tldr
 RUN /usr/local/bin/tldr --update

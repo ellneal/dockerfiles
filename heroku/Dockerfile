@@ -1,5 +1,8 @@
-FROM node:9.3
+FROM node:alpine
 
+# RUN apk update && apk add git
+RUN apk --no-cache --virtual .install_dependencies add git
 RUN npm install -g heroku-cli
+RUN apk del .install_dependencies
 
 ENTRYPOINT ["/usr/local/bin/heroku"]

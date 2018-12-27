@@ -1,7 +1,7 @@
-FROM ruby:2.3-alpine
+FROM ruby:alpine
 
-RUN apk --no-cache --virtual .install_dependencies add git gcc
-RUN gem install travis -v 1.8.8 --no-rdoc --no-ri
+RUN apk --no-cache --virtual .install_dependencies add git build-base
+RUN gem install travis
 RUN apk del .install_dependencies
 
 ENTRYPOINT ["travis"]

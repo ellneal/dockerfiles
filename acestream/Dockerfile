@@ -19,5 +19,3 @@ RUN wget "http://dl.acestream.org/linux/acestream_3.1.16_debian_8.7_x86_64.tar.g
     rm acestream_3.1.16_debian_8.7_x86_64.tar.gz
 
 ENTRYPOINT ["/opt/acestream/start-engine", "--client-console"]
-
-# http://127.0.0.1:6878/ace/getstream?id=fa59c7d264157f3075941d3dfedb532cabffa009
